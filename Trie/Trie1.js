@@ -46,7 +46,7 @@ class Trie{
             current = current.children[char]
         }
         if(!nodeToDelete){
-            delete this.root.children.word[0]
+            // delete this.root.children.word[0]
             return 'deleted'
         }
 
