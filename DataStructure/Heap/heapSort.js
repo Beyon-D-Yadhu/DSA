@@ -33,4 +33,4 @@ function heapify(arr, index, heapSize) {
 }
 const arr = [12, 11, 13, 5, 6, 7];
 console.log("Original array:", arr);
-console.log("Sorted array:", heapSort(arr.slice()));
+console.log("Sorted array:", heapSort(arr));

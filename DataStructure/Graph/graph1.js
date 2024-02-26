@@ -59,7 +59,22 @@ class Graph{
         return result
     }
     dfs(start){
-        
+        let stack = [start]
+        let visted = {}
+        let result = []
+        while(stack.length){
+            const currStack = stack.pop()
+            if(!visted[currStack]){
+                visted[currStack] = true
+            }
+            result.push(currStack)
+            for(let vertex of this.adjacencyList[currStack]){
+                if(!visted[vertex]){
+                    stack.push(vertex)
+                }
+            }
+        }
+        return result
     }
 }
 
@@ -94,4 +109,6 @@ graph.addEdge('C','F')
 // graph.removeVertex('B')
 // graph.display()
 
-console.log(graph.bfs('A'));
+// console.log(graph.bfs('A'));
+
+console.log(graph.dfs('A'))
